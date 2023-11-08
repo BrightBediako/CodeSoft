@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    // background-color: #001524;
+    background-color: #2E4374;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+
+    &__logo {
+        div {
+            color: white;
+            font-weight: 300;
+        }
+    }
+
+    .button {
+        background-color: white;
+
+    }
+
+
+}
