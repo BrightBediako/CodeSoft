@@ -12,7 +12,7 @@ if (isset($_GET['cat_id'])) {
     $posts->execute();
     $rows = $posts->fetchAll(PDO::FETCH_OBJ);
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 ?>
@@ -37,7 +37,7 @@ if (isset($_GET['cat_id'])) {
         <?php foreach ($rows as $row) : ?>
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="http://localhost/clean-blog/posts/post.php?post_id=<?php echo $row->id; ?>">
+                <a href="http://localhost/blog-website/posts/post.php?post_id=<?php echo $row->id; ?>">
                     <h2 class="post-title"><?php echo $row->title; ?></h2>
                     <h3 class="post-subtitle"><?php echo $row->subtitle; ?></h3>
                 </a>

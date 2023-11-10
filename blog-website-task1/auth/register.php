@@ -7,7 +7,7 @@
     <?php
 
     if (isset($_SESSION['username'])) {
-        header("Location: http://localhost/clean-blog/index.php");
+        header("Location: http://localhost/blog-website/index.php");
     }
 
     if (isset($_POST['submit'])) {
@@ -33,18 +33,18 @@
     ?>
 
 
-<span class="registerTitle">Register</span>
-<form method="POST" action="register.php" class="registerForm">
-    <label>Email</label>
-    <input class="registerInput" type="email" name="email" placeholder="Enter your email..." />
-    <label>Username</label>
-    <input class="registerInput" type="text" name="username" placeholder="Enter your username..." />
-    <label>Password</label>
-    <input class="registerInput" type="password" name="password" placeholder="Enter your password..." />
-    <button type="submit" name="submit" class="registerButton">Register</button>
-</form>
-<button class="registerLoginButton"><a href="login.php" class="link">LOGIN</a></button>
+    <span class="registerTitle">Register</span>
+    <form method="POST" action="register.php" class="registerForm">
+        <label>Email</label>
+        <input class="registerInput" type="email" name="email" placeholder="Enter your email..." />
+        <label>Username</label>
+        <input class="registerInput" type="text" name="username" placeholder="Enter your username..." />
+        <label>Password</label>
+        <input class="registerInput" type="password" name="password" placeholder="Enter your password..." />
+        <button type="submit" name="submit" class="registerButton">Register</button>
+    </form>
+    <button class="registerLoginButton"><a href="login.php" class="link">LOGIN</a></button>
 </div>
 
 
-<!-- <?php //require "../includes/footer.php" ?> -->
+<?php require "../includes/footer.php" ?>

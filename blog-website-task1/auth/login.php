@@ -1,12 +1,12 @@
-<?php require "../includes/header.php" ?>
-<?php require "../config/config.php" ?>
+<?php require "../includes/header.php";?>
+<?php require "../config/config.php";?>
 
 
 <div class="login">
     <?php
 
     if (isset($_SESSION['username'])) {
-        header("Location: http://localhost/clean-blog/index.php");
+        header("Location: http://localhost/blog-website/index.php");
     }
 
     if (isset($_POST['submit'])) {
@@ -27,7 +27,7 @@
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['user_id'] = $row['id'];
 
-                    header("Location: http://localhost/clean-blog/index.php");
+                    header("Location: http://localhost/blog-website/index.php");
                     // echo "<div class='alert alert-success  text-center  role='alert'> Login was successful...</div>";
                 } else {
 
@@ -51,5 +51,4 @@
     <button class="loginRegisterButton"><a href="register.php" class="link">Register</a></button>
 </div>
 
-<!-- <?php //require "../includes/footer.php" 
-        ?> -->
+<?php require "../includes/footer.php" ?>

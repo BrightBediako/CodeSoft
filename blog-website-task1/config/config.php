@@ -6,6 +6,12 @@ try {
     $user = "root";
     $password = "";
 
+    
+    // $host = "localhost";
+    // $dbname = "id21522212_internblog";
+    // $user = "id21522212_internblog";
+    // $password = "blog000Webhost.7";
+
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -18,3 +24,5 @@ if ($conn == true) {
 } else {
     echo "Connected failed";
 }
+
+?>
