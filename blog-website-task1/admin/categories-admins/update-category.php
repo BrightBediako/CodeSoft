@@ -7,7 +7,7 @@ if (isset($_GET['up_id'])) {
   $id = $_GET['up_id'];
 
   if (!isset($_SESSION['adminname'])) {
-    header("location: http://localhost/clean-blog/admin/admins/login-admins.php");
+    header("location: http://localhost/blog-website/admin/admins/login-admins.php");
   }
 
   $select = $conn->query("SELECT * FROM categories WHERE id = '$id'");
@@ -25,11 +25,11 @@ if (isset($_GET['up_id'])) {
         ':name' => $name,
       ]);
 
-      header('location: http://localhost/clean-blog/admin/categories-admins/show-categories.php');
+      header('location: http://localhost/blog-website/admin/categories-admins/show-categories.php');
     }
   }
 } else {
-  header("location: http://localhost/clean-blog/404.php");
+  header("location: http://localhost/blog-website/404.php");
 }
 
 ?>

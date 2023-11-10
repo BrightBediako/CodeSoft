@@ -11,9 +11,9 @@ if (isset($_GET['po_id'])) {
         ':id' => $id
     ]);
 
-    header('location: http://localhost/clean-blog/admin/posts-admins/show-posts.php');
+    header('location: http://localhost/blog-website/admin/posts-admins/show-posts.php');
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 ?>

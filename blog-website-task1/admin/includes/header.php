@@ -14,7 +14,7 @@ session_start();
   <title>Admin Panel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="http://localhost/clean-blog/admin/styles/style.css" rel="stylesheet">
+  <link href="http://localhost/blog-website/admin/styles/style.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
@@ -31,21 +31,21 @@ session_start();
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav side-nav">
               <li class="nav-item">
-                <a class="nav-link text-white" style="margin-left: 20px;" href="http://localhost/clean-blog/admin/index.php">Home
+                <a class="nav-link text-white" style="margin-left: 20px;" href="http://localhost/blog-website/admin/index.php">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost/clean-blog/admin/admins/admins.php" style="margin-left: 20px;">Admins</a>
+                <a class="nav-link" href="http://localhost/blog-website/admin/admins/admins.php" style="margin-left: 20px;">Admins</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost/clean-blog/admin/categories-admins/show-categories.php" style="margin-left: 20px;">Categories</a>
+                <a class="nav-link" href="http://localhost/blog-website/admin/categories-admins/show-categories.php" style="margin-left: 20px;">Categories</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost/clean-blog/admin/posts-admins/show-posts.php" style="margin-left: 20px;">Posts</a>
+                <a class="nav-link" href="http://localhost/blog-website/admin/posts-admins/show-posts.php" style="margin-left: 20px;">Posts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost/clean-blog/admin/comments-admins/show-comments.php" style="margin-left: 20px;">Comments</a>
+                <a class="nav-link" href="http://localhost/blog-website/admin/comments-admins/show-comments.php" style="margin-left: 20px;">Comments</a>
               </li>
             <?php endif; ?>
 
@@ -53,7 +53,7 @@ session_start();
             <ul class="navbar-nav ml-md-auto d-md-flex">
               <?php if (isset($_SESSION['adminname'])) : ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="http://localhost/clean-blog/admin/index.php">Home
+                  <a class="nav-link" href="http://localhost/blog-website/admin/index.php">Home
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
@@ -63,12 +63,12 @@ session_start();
                     <?php echo $_SESSION['adminname']; ?>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://localhost/clean-blog/admin/admins/logout.php">Logout</a>
+                    <a class="dropdown-item" href="http://localhost/blog-website/admin/admins/logout.php">Logout</a>
                   </div>
                 </li>
               <?php else : ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="http://localhost/clean-blog/admin/admins/login-admins.php">Login
+                  <a class="nav-link" href="http://localhost/blog-website/admin/admins/login-admins.php">Login
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>

@@ -10,9 +10,9 @@ if (isset($_GET['de_id'])) {
         ':id' => $id
     ]);
 
-    header('location: http://localhost/clean-blog/admin/categories-admins/show-categories.php');
+    header('location: http://localhost/blog-website/admin/categories-admins/show-categories.php');
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 ?>

@@ -8,10 +8,10 @@
         $delete->execute([
                 ':id' => $id
         ]);
-       header('location: http://localhost/clean-blog/admin-panel/comments-admins/show-comments.php');
+       header('location: http://localhost/blog-website/admin-panel/comments-admins/show-comments.php');
         
     }  else {
-        header("location: http://localhost/clean-blog/404.php");
+        header("location: http://localhost/blog-website/404.php");
        
     }  
 

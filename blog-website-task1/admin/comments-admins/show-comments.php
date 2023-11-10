@@ -3,7 +3,7 @@
 <?php
 
 if (!isset($_SESSION['adminname'])) {
-  header("location: http://localhost/clean-blog/admin/admins/login-admins.php");
+  header("location: http://localhost/blog-website/admin/admins/login-admins.php");
 }
 
 $comments = $conn->query("SELECT posts.id AS id, posts.title AS title, comments.id AS comment_id, comments.id_post_comment AS id_post_comment, comments.user_name_comment AS user_name_comment, comments.comment AS comment, comments.status_comment AS status_comment FROM comments JOIN posts ON posts.id = comments.id_post_comment");
@@ -36,11 +36,11 @@ $rows = $comments->fetchAll(PDO::FETCH_OBJ);
                 <td><?php echo $row->comment; ?></td>
                 <td><?php echo $row->user_name_comment; ?></td>
                 <?php if ($row->status_comment == 0) : ?>
-                  <td><a href="http://localhost/clean-blog/admin/comments-admins/status-comments.php?comment_id=<?php echo $row->comment_id; ?>&status_comment=<?php echo $row->status_comment; ?>" class="btn btn-danger  text-center ">Deactivated</a></td>
+                  <td><a href="http://localhost/blog-website/admin/comments-admins/status-comments.php?comment_id=<?php echo $row->comment_id; ?>&status_comment=<?php echo $row->status_comment; ?>" class="btn btn-danger  text-center ">Deactivated</a></td>
                 <?php else : ?>
-                  <td><a href="http://localhost/clean-blog/admin/comments-admins/status-comments.php?comment_id=<?php echo $row->comment_id; ?>&status_comment=<?php echo $row->status_comment; ?>" class="btn btn-success  text-center ">Activated</a></td>
+                  <td><a href="http://localhost/blog-website/admin/comments-admins/status-comments.php?comment_id=<?php echo $row->comment_id; ?>&status_comment=<?php echo $row->status_comment; ?>" class="btn btn-success  text-center ">Activated</a></td>
                 <?php endif; ?>
-                <td><a href="http://localhost/clean-blog/admin/comments-admins/delete-comments.php?comment_id=<?php echo $row->comment_id; ?>" class="btn btn-danger  text-center ">Delete</a></td>
+                <td><a href="http://localhost/blog-website/admin/comments-admins/delete-comments.php?comment_id=<?php echo $row->comment_id; ?>" class="btn btn-danger  text-center ">Delete</a></td>
               </tr>
             <?php endforeach; ?>
           </tbody>

@@ -11,7 +11,7 @@
         <?php
 
         if (!isset($_SESSION['adminname'])) {
-          header("location: http://localhost/clean-blog/admin-panel/admins/login-admins.php");
+          header("location: http://localhost/blog-website/admin-panel/admins/login-admins.php");
         }
 
         if (isset($_POST['submit'])) {
@@ -32,7 +32,7 @@
               ':mypassword' => $password
             ]);
 
-            header("Location: /http://localhost/clean-blog/admin/admins/admins.php");
+            header("Location: /http://localhost/blog-website/admin/admins/admins.php");
           }
         }
         ?>

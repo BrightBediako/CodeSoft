@@ -4,7 +4,7 @@
 <?php
 
 if (isset($_SESSION['adminname'])) {
-  header("location: http://localhost/clean-blog/admin/index.php");
+  header("location: http://localhost/blog-website/admin/index.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['admin_id'] = $row['id'];
 
 
-        header('location: http://localhost/clean-blog/admin/index.php');
+        header('location: http://localhost/blog-website/admin/index.php');
       } else {
 
         echo "<div class='alert alert-danger  text-center text-white role='alert'> Wrong credentials...</div>";

@@ -4,7 +4,7 @@
 <?php
 
 if (!isset($_SESSION['adminname'])) {
-    header("location: http://localhost/clean-blog/admin/admins/login-admins.php");
+    header("location: http://localhost/blog-website/admin/admins/login-admins.php");
 }
 
 if (isset($_GET['id']) and isset($_GET['status'])) {
@@ -15,15 +15,15 @@ if (isset($_GET['id']) and isset($_GET['status'])) {
         $update = $conn->prepare("UPDATE posts SET status = 1  WHERE id = '$id'");
         $update->execute();
 
-        header('location: http://localhost/clean-blog/admin/posts-admins/show-posts.php');
+        header('location: http://localhost/blog-website/admin/posts-admins/show-posts.php');
     } else {
         $update = $conn->prepare("UPDATE posts SET status = 0  WHERE id = '$id'");
         $update->execute();
 
-        header('location: http://localhost/clean-blog/admin/posts-admins/show-posts.php');
+        header('location: http://localhost/blog-website/admin/posts-admins/show-posts.php');
     }
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 
