@@ -11,7 +11,7 @@ if (isset($_GET['del_id'])) {
     $posts = $select->fetch(PDO::FETCH_OBJ);
 
     if ($_SESSION['user_id'] !== $posts->user_id) {
-        header('location: http://localhost/clean-blog/index.php');
+        header('location: http://localhost/blog-website/index.php');
     } else {
         unlink("images/" . $posts->img . "");
 
@@ -21,9 +21,9 @@ if (isset($_GET['del_id'])) {
         ]);
     }
 
-    header('location: http://localhost/clean-blog/index.php');
+    header('location: http://localhost/blog-website/index.php');
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 ?>

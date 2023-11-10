@@ -7,7 +7,7 @@
         <p class="lead">
             The page you’re looking for doesn’t exist.
         </p>
-        <a href="http://localhost/clean-blog/index.php" class="btn btn-primary">Go Home</a>
+        <a href="http://localhost/blog-website/index.php" class="btn btn-primary">Go Home</a>
     </div>
 </div>
 </body>

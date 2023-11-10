@@ -12,7 +12,7 @@ if (isset($_GET['prof_id'])) {
     $rows = $select->fetch(PDO::FETCH_OBJ);
 
     if ($_SESSION['user_id'] !== $rows->id) {
-        header('location: http://localhost/clean-blog/index.php');
+        header('location: http://localhost/blog-website/index.php');
     }
 
     //second query
@@ -30,11 +30,11 @@ if (isset($_GET['prof_id'])) {
                 ':username' => $username,
             ]);
 
-            header('location: http://localhost/clean-blog/users/profile.php?prof_id=' . $_SESSION['user_id'] . '');
+            header('location: http://localhost/blog-website/users/profile.php?prof_id=' . $_SESSION['user_id'] . '');
         }
     }
 } else {
-    header("location: http://localhost/clean-blog/404.php");
+    header("location: http://localhost/blog-website/404.php");
 }
 
 ?>

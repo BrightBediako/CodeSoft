@@ -12,7 +12,7 @@ if (isset($_GET['upd_id'])) {
     $rows = $select->fetch(PDO::FETCH_OBJ);
 
     if ($_SESSION['user_id'] !== $rows->user_id) {
-        header('Location: http://localhost/clean-blog/index.php');
+        header('Location: http://localhost/blog-website/index.php');
     }
 
     //second query
@@ -41,12 +41,12 @@ if (isset($_GET['upd_id'])) {
 
 
             if (move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
-                header('location: http://localhost/clean-blog/index.php');
+                header('location: http://localhost/blog-website/index.php');
             }
         }
     }
 } else {
-    header("Location: http://localhost/clean-blog/404.php");
+    header("Location: http://localhost/blog-website/404.php");
 }
 ?>
 
@@ -75,7 +75,7 @@ if (isset($_GET['upd_id'])) {
             <input type="text" name="subtitle" value="<?php echo $rows->subtitle; ?>" id="form2Example1" class="form-control" placeholder="" />
         </div>
         <div class="form-outline mb-4">
-            <textarea type="text" name="body" id="form2Example1" class="form-control" placeholder="body" rows="8"><?php echo $rows->body; ?></textarea>
+            <textarea type="text" name="body" id="summernote" class="form-control" placeholder="body" rows="8"><?php echo $rows->body; ?></textarea>
         </div>
 
         <?php echo "<img src='images/" . $rows->img . "' width=900px height=300px> "; ?>

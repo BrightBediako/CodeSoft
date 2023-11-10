@@ -11,7 +11,7 @@ if (isset($_GET['post_id'])) {
     $select->execute();
     $post = $select->fetch(PDO::FETCH_OBJ);
 } else {
-    header("Location: http://localhost/clean-blog/404.php");
+    header("Location: http://localhost/blog-website/404.php");
 }
 
 // comments
@@ -37,7 +37,7 @@ if (isset($_POST['submit']) and isset($_GET['post_id'])) {
 
         echo "<script>alert('Comment added and it will be fowarded to the admins'); </script>";
 
-        //header("Location: http://localhost/clean-blog/posts/post.php?post_id=".$id."");
+        //header("Location: http://localhost/blog-website/posts/post.php?post_id=".$id."");
     }
 }
 
@@ -76,7 +76,7 @@ $allComments = $comments->fetchAll(PDO::FETCH_OBJ);
                 <p><?php echo $post->body; ?></p>
 
                 <?php if (isset($_SESSION['user_id']) and $_SESSION['user_id'] == $post->user_id) : ?>
-                    <a href="http://localhost/clean-blog/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end">Delete</a>
+                    <a href="http://localhost/blog-website/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end">Delete</a>
                     <a href="update.php?upd_id=<?php echo $post->id; ?>" class="btn btn-warning text-center">Update</a>
 
                 <?php endif; ?>

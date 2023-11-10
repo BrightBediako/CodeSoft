@@ -1,5 +1,6 @@
-<?php require "../includes/header.php" ?>
-<?php require "../config/config.php" ?>
+<?php require "../includes/header.php"?>
+<?php require "../config/config.php"?>
+
 <!-- Page Header-->
 <header class="masthead" style="background-image: url('https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&w=500')">
     <div class="container position-relative px-4 px-lg-5">
@@ -7,7 +8,7 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     <h1>Clean Blog</h1>
-                    <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                    <span class="subheading">Share your story with World</span>
                 </div>
             </div>
         </div>
@@ -20,9 +21,8 @@
 
 
     <?php
-
     // if (isset($_SESSION['username'])) {
-    //     header("Location: http://localhost/clean-blog/index.php");
+    //     header("Location: http://localhost/blog-website/index.php");
     // }
 
     $categories = $conn->query("SELECT * FROM categories");
@@ -57,8 +57,9 @@
             ]);
 
             if (move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
-                header("Location: http://localhost/clean-blog/index.php");
+                // header("Location: http://localhost/blog-website/index.php");
             }
+            header("Location: http://localhost/blog-website/index.php");
         }
     }
     ?>
@@ -74,7 +75,7 @@
         </div>
 
         <div class="form-outline mb-4">
-            <textarea type="text" name="body" id="form2Example1" class="form-control" placeholder="Share your story..." rows="8"></textarea>
+            <textarea type="text" name="body" id="summernote" class="form-control" placeholder="Share your story..." rows="8"></textarea>
         </div>
 
         <div class="form-outline mb-4">
@@ -91,12 +92,7 @@
         </div>
         <!-- Submit button -->
         <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">Publish</button>
-
-
     </form>
-
-
-
 </div>
 
 <?php include_once "../includes/footer.php" ?>
